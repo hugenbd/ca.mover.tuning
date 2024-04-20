@@ -172,7 +172,7 @@ _(Move files that are greater than this sparseness)_:
   </select>
 
 <!--:mover_tuning_min_sparseness_help:-->
-> Select the minimum sparsness a file has to be to get moved.
+> Select the minimum sparseness a file has to be to get moved.
 
 _(Skip files listed in text file)_:
 : <select name='filelistf' onchange='$(".myfilelistf").toggleAttr("disabled")'>
@@ -198,7 +198,7 @@ _(Skip file types)_:
 <!--:mover_tuning_file_type_help:-->
 > Select **Yes** to skip specific file types.
 
-_(Comma seperated list of file types)_:
+_(Comma separated list of file types)_:
 : <input type='text' name='filetypesv' class='myfiletypesf' value='<?= $cfg['filetypesv'] ?>' <?= $filetypesfDisabled ?>>
 
 <!--:mover_tuning_file_type_delimited_help:-->
@@ -232,7 +232,7 @@ _(Move All from Cache-Yes shares when disk is above a certain percentage)_:
 _(Move **ALL** files from current pool (wont use mover settings))_:
 : <input type="button" id="MoveShare" value="Move Now" onclick="moveShareNow()">
 </div>
-> Clicking the **"Move Now"** button will invoke the mover for only this share. It will move the enitre share to the array ignoring any mover settings.
+> Clicking the **"Move Now"** button will invoke the mover for only this share. It will move the entire share to the array ignoring any mover settings.
 
 <? else: ?>
 <div markdown="1" class="shade-<?=$display['theme']?>">

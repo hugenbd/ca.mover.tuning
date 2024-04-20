@@ -191,10 +191,10 @@ Ignore file types:
 <?=mk_option($cfg['filetypesf'],"yes","Yes")?>
 </select>
 
-Comma seperated list of file types:
+Comma separated list of file types:
 : <input type='text' name='filetypesv' size='1' class='narrow myfiletypesf' value='<?=$cfg['filetypesv']?>' <?=$filetypesfDisabled?>>
 
-> A list of file types seperated by a comma.
+> A list of file types separated by a comma.
 
 
 Let scheduled mover run during a parity check / rebuild:

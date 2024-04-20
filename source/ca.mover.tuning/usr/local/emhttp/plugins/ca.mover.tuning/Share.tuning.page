@@ -196,7 +196,7 @@ _(Skip file types)_:
   </select>
 
 <!--:mover_tuning_file_type_help:-->
-> Select **Yes** to skip specific file types.
+> Select **Yes** to skip specific file types in addition to those selected globally.
 
 _(Comma seperated list of file types)_:
 : <input type='text' name='filetypesv' class='myfiletypesf' value='<?= $cfg['filetypesv'] ?>' <?= $filetypesfDisabled ?>>

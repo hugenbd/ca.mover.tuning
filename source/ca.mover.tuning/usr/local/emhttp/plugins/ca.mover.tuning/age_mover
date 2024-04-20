@@ -612,6 +612,7 @@ start() {
 
     for SHARECFG in /boot/config/shares/*; do
         overrideFlag=0
+        globalSkipFileTypes=$SKIPFILETYPES
 
         if grep -qs 'shareUseCache="yes"' "$SHARECFG"; then
             #Start Creating the Find String.
@@ -733,6 +734,13 @@ start() {
                     done
                 fi
 
+                if [ $overrideFlag = 1 ] && [ -n "$globalSkipFileTypes" ]; then
+                    FINDSTR+=" | grep -iv"
+                    for i in $(echo $globalSkipFileTypes | sed "s/,/ /g"); do
+                        FINDSTR+=" -e '\\$i'"
+                    done
+                fi
+                
                 if [ -d "$SHAREPATH" ]; then
                     eval "$FINDSTR>>$MOVER_FILELIST"
                 fi
